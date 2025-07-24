@@ -39,5 +39,8 @@ jobs:
         uv run ruff check .
 
     - name: Run main.py
+      env:
+        TOKEN: ${{ secrets.TOKEN }}
+        PROFILE: ${{ secrets.PROFILE }}
       run: |
         uv run python main.py
